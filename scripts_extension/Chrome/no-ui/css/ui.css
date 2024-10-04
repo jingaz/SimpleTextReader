@@ -143,31 +143,57 @@ To Offset the anchor link to clear fixed header
 
 /* Pagination */
 #pagination {
+    opacity: var(--ui_paginationOpacity);
     position: fixed;
-    bottom: 30px;
+    bottom: var(--ui_paginationBottom);
     background-color: var(--bgColor);
     border: 1px dashed var(--borderColor);
     border-radius: 8px;
-    box-shadow: 0 1px 1px var(--shadowColor), 
-              0 2px 2px var(--shadowColor), 
-              0 4px 4px var(--shadowColor), 
-              0 8px 8px var(--shadowColor),
-              0 16px 16px var(--shadowColor);
-    -webkit-box-shadow: var(--shadowColor) 0 1px 1px, 
-    var(--shadowColor) 0 2px 2px, 
-    var(--shadowColor) 0 4px 4px, 
-    var(--shadowColor) 0 8px 8px,
-    var(--shadowColor) 0 16px 16px;
-    -moz-box-shadow: 0 1px 1px var(--shadowColor), 
-    0 2px 2px var(--shadowColor), 
-    0 4px 4px var(--shadowColor), 
-    0 8px 8px var(--shadowColor),
-    0 16px 16px var(--shadowColor);
-    /* display: none; */
-    /* left: 61%; */
+    box-shadow: 0 1px 1px var(--shadowColor),
+        0 2px 2px var(--shadowColor),
+        0 4px 4px var(--shadowColor),
+        0 8px 8px var(--shadowColor),
+        0 16px 16px var(--shadowColor);
+    -webkit-box-shadow: var(--shadowColor) 0 1px 1px,
+        var(--shadowColor) 0 2px 2px,
+        var(--shadowColor) 0 4px 4px,
+        var(--shadowColor) 0 8px 8px,
+        var(--shadowColor) 0 16px 16px;
+    -moz-box-shadow: 0 1px 1px var(--shadowColor),
+        0 2px 2px var(--shadowColor),
+        0 4px 4px var(--shadowColor),
+        0 8px 8px var(--shadowColor),
+        0 16px 16px var(--shadowColor);
     transform: translate(-50%);
     -webkit-transform: translate(-50%);
     font-size: 0.9em;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    visibility: hidden;
+    /* 初始状态下隐藏 */
+}
+
+#pagination:hover,
+#pagination:focus-within {
+    opacity: 1;
+}
+
+/* 使用 @keyframes 来创建一个延迟隐藏的效果 */
+@keyframes hideAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#pagination:not(:hover) {
+    animation: hideAnimation 0.5s forwards;
 }
 .pagination {
     list-style-type: none;

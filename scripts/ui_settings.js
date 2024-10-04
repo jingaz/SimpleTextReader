@@ -223,7 +223,7 @@ function initiateSettingMenu() {
     if (respectUserLangSetting)
         settingUILanguage = createSelectorItem("setting_uilanguage", Object.keys(ui_language_mapping), Object.values(ui_language_mapping));
     let settingLineHeight = createRangeItem("setting_p_lineHeight", parseFloat(p_lineHeight), 1, 3, 0.5, unit='em');
-    let settingFontSize = createRangeItem("setting_p_fontSize", parseFloat(p_fontSize), 1, 3, 0.5, unit='em');
+    let settingFontSize = createRangeItem("setting_p_fontSize", parseFloat(p_fontSize), 1, 3, 0.2, unit='em');
     let settingLightMainColorActive = createColorItem("setting_light_mainColor_active", light_mainColor_active, savedValues=["#2F5086"]);
     let settingLightFontColor = createColorItem("setting_light_fontColor", light_fontColor, savedValues=["black"]);
     let settingLightBgColor = createColorItem("setting_light_bgColor", light_bgColor, savedValues=["#FDF3DF"]);

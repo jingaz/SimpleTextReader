@@ -35,7 +35,26 @@
     url(../fonts/FZSKBXKK.woff2) format('woff2');
     font-display: swap;
 } */
-
+ @font-face {
+    font-family:"msyh";
+    src:
+    local("微软雅黑"),
+    local("Microsoft YaHei"),
+    url(../fonts/MSYH.woff2) format('woff2');
+    font-display: swap;
+}
+ @font-face {
+     font-family: "Galdeano";
+     src: local("Galdeano-Regular"),
+     url(../fonts/Galdeano-Regular.woff2) format('woff2');
+     font-display: swap;
+ }
+  @font-face {
+      font-family: "SourceCodePro";
+      src: local("SourceCodePro-Regular"),
+      url(../fonts/SourceCodePro-Regular.woff2) format('woff2');
+      font-display: swap;
+  }
 
 
 :root {
@@ -66,7 +85,7 @@
     --ui_loadingImgSize: 380px;
     --ui_footnoteImgSize: 12px;
     --ui_paginationBottom: 30px;
-    --ui_paginationOpacity: 1;
+    --ui_paginationOpacity: 0;
 
     /* UI strings */
     --ui_Mode: light;
@@ -236,9 +255,9 @@
     --fontFamily_title_zh: title, ui;
     --fontFamily_title_en: ui;
     --fontFamily_body: "";
-    --fontFamily_body_zh: body, ui;
+    --fontFamily_body_zh: msyh, body, ui;
     --fontFamily_body_en: ui;
-    --fontFamily_ui: ui, Arial, Helvetica, sans-serif;
+    --fontFamily_ui: msyh, ui, Arial, Helvetica, sans-serif;
 
     /* Dark mode variables */
     --darkMode_init_animation: all 0s ease;
@@ -249,13 +268,13 @@
 
     --darkMode_mainColor_active: #6096BB;
     --darkMode_mainColor_inactive: #2A4D63;
-    --darkMode_bgColor: #121621;
+    --darkMode_bgColor: #2d2d2d;
     --darkMode_borderColor: gray;
     --darkMode_shadowColor: rgba(0, 0, 0, 0.12);
     --darkMode_paginationFontColor: lightgray;
     --darkMode_paginationActiveFontColor: lightgray;
     --darkMode_fontInfoColor: gray;
-    --darkMode_fontColor: #FFE9BD;
+    --darkMode_fontColor: #939392;
 }
 
 [data-theme="dark"] {

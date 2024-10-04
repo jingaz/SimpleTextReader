@@ -35,7 +35,28 @@
     url(../fonts/FZSKBXKK.woff2) format('woff2');
     font-display: swap;
 } */
+ @font-face {
+     font-family: "msyh";
+     src:
+         local("微软雅黑"),
+         local("Microsoft YaHei"),
+         url(../fonts/MSYH.woff2) format('woff2');
+     font-display: swap;
+ }
 
+ @font-face {
+     font-family: "Galdeano";
+     src: local("Galdeano-Regular"),
+         url(../fonts/Galdeano-Regular.woff2) format('woff2');
+     font-display: swap;
+ }
+
+ @font-face {
+     font-family: "SourceCodePro";
+     src: local("SourceCodePro-Regular"),
+         url(../fonts/SourceCodePro-Regular.woff2) format('woff2');
+     font-display: swap;
+ }
 
 
 :root {
@@ -100,7 +121,7 @@
 
     /* Font variables */
     --fontFamily_title_CN: title, ui;
-    --fontFamily_body_CN: body, ui;
+    --fontFamily_body_CN: msyh, body, ui;
     --fontFamily_title_EN: ui;
     --fontFamily_body_EN: ui;
     --fontFamily_ui: ui, Arial, Helvetica, sans-serif;

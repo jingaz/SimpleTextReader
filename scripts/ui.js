@@ -6,8 +6,12 @@ if (isVariableDefined(dropZone)) {
     dropZone.addEventListener("dragover", handleDragOver, false);
     dropZone.addEventListener("drop", handleDrop, false);
     dropZone.addEventListener("dragleave", handleDragLeave, false);
-    dropZone.addEventListener("dblclick", openFileSelector, false);
+    dropZone.addEventListener("click", openFileSelector, false);
 }
+contentContainer.addEventListener('dragenter', function (event) {
+    event.stopPropagation(); // 阻止 dragstart 事件冒泡到父元素
+});
+
 if (isVariableDefined(darkModeToggle)) {
     // localStorage.removeItem("UIMode");
     darkModeToggle.addEventListener("change", (e) => {

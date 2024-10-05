@@ -108,7 +108,7 @@ var observer = new MutationObserver(function (mutations) {
 
             let content = document.createElement('div');
             content.setAttribute('id', 'content');
-            content.addEventListener('dragstart', function (event) {
+            content.addEventListener('dragenter', function (event) {
                 event.stopPropagation(); // 阻止 dragstart 事件冒泡到父元素
             });
             document.body.appendChild(content);
